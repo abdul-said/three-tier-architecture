@@ -12,7 +12,7 @@ resource "aws_instance" "PublicWebTemplate" {
   ami                    = data.aws_ami.myimage.image_id
   instance_type          = "t2.micro"
   subnet_id              = module.vpc.public_subnet_id_1
-  vpc_security_group_ids = [aws_security_group.webserver_security_group]
+  vpc_security_group_ids = [aws_security_group.webserver_security_group.id]
   key_name               = "terraform-key"
   user_data              = file("../user-data")
 
@@ -25,7 +25,7 @@ resource "aws_instance" "PrivateAppTemplate" {
   ami                    = data.aws_ami.myimage.image_id
   instance_type          = "t2.micro"
   subnet_id              = module.vpc.private_subnet_1_id
-  vpc_security_group_ids = [aws_security_group.ssh_security_group]
+  vpc_security_group_ids = [aws_security_group.ssh_security_group.id]
   key_name               = "terraform-key"
 
   tags = {

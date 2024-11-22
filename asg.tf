@@ -6,7 +6,7 @@ resource "aws_launch_template" "auto-scaling-group-web" {
   key_name = "terraform-key"
   network_interfaces {
     subnet_id = module.vpc.public_subnet_id_1
-    security_groups = [ aws_security_group.webserver_security_group ]
+    security_groups = [ aws_security_group.webserver_security_group.id]
   }
 }
 
@@ -30,7 +30,7 @@ resource "aws_launch_template" "auto-scaling-group-private" {
   key_name = "terraform-key"
   network_interfaces {
     subnet_id = module.vpc.private_subnet_1_id
-    security_groups = [ aws_security_group.ssh_security_group ]
+    security_groups = [ aws_security_group.ssh_security_group.id]
   }
 }
 
