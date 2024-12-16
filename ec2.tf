@@ -14,7 +14,7 @@ resource "aws_instance" "PublicWebTemplate" {
   subnet_id              = module.vpc.public_subnet_id_1
   vpc_security_group_ids = [aws_security_group.webserver_security_group.id]
   key_name               = "terraform-key"
-  user_data              = file("../user-data")
+  user_data              = file("user-data.sh")
 
   tags = {
     Name = "web-instance"
