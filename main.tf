@@ -1,15 +1,15 @@
 module "vpc" {
   source = "../terraform-aws-vpc/terraform-aws-vpc"
 
-  vpc_name                 = "dev-vpc"
-  public_subnet_1_cidr     = "10.0.1.0/24"
-  public_subnet_2_cidr     = "10.0.2.0/24"
-  private_subnet_1_cidr    = "10.0.10.0/24"
-  private_subnet_2_cidr    = "10.0.11.0/24"
-  private_db_subnet_1_cidr = "10.0.5.0/24"
-  private_db_subnet_2_cidr = "10.0.6.0/24"
-  cidr_block_vpc           = "10.0.0.0/16"
-  default_cidr             = "0.0.0.0/0"
-  internet_gateway_name    = "MyIG"
+  vpc_name                 = var.vpc_name
+  public_subnet_1_cidr     = var.public_subnet_cidr_1
+  public_subnet_2_cidr     = var.public_subnet_cidr_2
+  private_subnet_1_cidr    = var.private_subnet_cidr_1
+  private_subnet_2_cidr    = var.private_subnet_cidr_2
+  private_db_subnet_1_cidr = var.private_db_subnet_cidr_1
+  private_db_subnet_2_cidr = var.private_db_subnet_cidr_2
+  cidr_block_vpc           = var.vpc_cidr_block
+  default_cidr             = var.default_cidr_block
+  internet_gateway_name    = var.internet_gateway_name
 }
 
