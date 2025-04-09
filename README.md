@@ -66,17 +66,17 @@ Before deploying this architecture, ensure you have the following:
 ## Usage
 ### Clone the Repository:
 
-git clone https://github.com/abdul-said/three-tier-architecture.git
-cd three-tier-architecture
+Use `git clone` https://github.com/abdul-said/three-tier-architecture.git
+Use `cd` three-tier-architecture
 
 ### Initialize Terraform:
-  terraform init
+  Use `terraform init`
 
 ### Plan the Deployment:
-  terraform plan
+ Use  `terraform plan`
 
 ### Apply the Deployment:
-  terraform apply
+  Use `terraform apply`
 
 
 ## Access the Application:
