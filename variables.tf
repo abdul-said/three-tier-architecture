@@ -1,258 +1,129 @@
-variable "public_subnet_cidr_1" {
-  default = "10.0.1.0/24"
-}
+variable "public_subnet_cidr_1" {}
 
-variable "public_subnet_cidr_2" {
-  default = "10.0.2.0/24"
-}
+variable "public_subnet_cidr_2" {}
 
-variable "private_subnet_cidr_1" {
-  default = "10.0.10.0/24"
-}
+variable "private_subnet_cidr_1" {}
 
-variable "private_subnet_cidr_2" {
-  default = "10.0.11.0/24"
-}
-variable "private_db_subnet_cidr_1" {
-  default = "10.0.5.0/24"
-}
+variable "private_subnet_cidr_2" {}
 
-variable "private_db_subnet_cidr_2" {
-  default = "10.0.6.0/24"
-}
+variable "private_db_subnet_cidr_1" {}
 
-variable "vpc_cidr_block" {
-  default = "10.0.0.0/16"
-}
+variable "private_db_subnet_cidr_2" {}
 
-variable "default_cidr_block" {
-  default = "0.0.0.0/0"
-}
+variable "vpc_cidr_block" {}
 
-variable "internet_gateway_name" {
-  default = "my_internet_gateway"
-}
+variable "default_cidr_block" {}
 
-variable "vpc_name" {
-  default = "dev_vpc"
-}
+variable "internet_gateway_name" {}
 
-variable "application_load_balancer_name" {
-  default = "three_tier-lb-"
-}
+variable "vpc_name" {}
 
-variable "false_argument" {
-  default = false
-}
+variable "application_load_balancer_name" {}
 
-variable "load_balancer_type" {
-  default = "application"
-}
+variable "false_argument" {}
 
-variable "alb_listener_port" {
-  default = "80"
-}
+variable "load_balancer_type" {}
 
-variable "alb_listener_protocol" {
-  default = "HTTP"
-}
+variable "alb_listener_port" {}
 
-variable "alb_default_action_type" {
-  default = "redirect"
-}
+variable "alb_listener_protocol" {}
 
-variable "redirect_port" {
-  default = "443"
-}
+variable "alb_default_action_type" {}
 
-variable "redirect_protocol" {
-  default = "HTTPS"
-}
+variable "redirect_port" {}
 
-variable "redirect_status_code" {
-  default = "HTTP_301"
-}
+variable "redirect_protocol" {}
 
-variable "alb_target_group_name" {
-  default = "application-lb-target-group"
-}
+variable "redirect_status_code" {}
 
-variable "alb_target_group_port" {
-  default = "80"
-}
+variable "alb_target_group_name" {}
 
-variable "alb_target_group_protocol" {
-  default = "HTTP"
-}
+variable "alb_target_group_port" {}
 
-variable "alb_target_group_attachment_port" {
-  default = "80"
-}
+variable "alb_target_group_protocol" {}
 
-variable "launch_template_web_name" {
-  default = "auto-scaling-group-web"
-}
+variable "alb_target_group_attachment_port" {}
 
-variable "launch_template_app_name" {
-  default = "auto-scaling-group-application"
-}
+variable "launch_template_web_name" {}
 
-variable "launch_template_instance_type" {
-  default = "t2.micro"
-}
+variable "launch_template_app_name" {}
 
-variable "launch_template_key_name" {
-  default = "terraform-key"
-}
+variable "launch_template_instance_type" {}
 
-variable "user_data" {
-  default = "user-data.sh"
-}
+variable "launch_template_key_name" {}
 
-variable "launch_template_version" {
-  default = "$Latest"
-}
+variable "user_data" {}
 
-variable "true_argument" {
-  default = true
-}
+variable "launch_template_version" {}
 
-variable "data_block_owners" {
-  default = "amazon"
-}
+variable "true_argument" {}
 
-variable "data_block_name" {
-  default = "name"
-}
+variable "data_block_owners" {}
 
-variable "data_block_values" {
-  default = "ubuntu/images/hvm-ssd/ubuntu-*-*-amd64-server-*"
-}
+variable "data_block_name" {}
 
-variable "asg_desired_capacity" {
-  default = 1
-}
+variable "data_block_values" {}
 
-variable "asg_min_size" {
-  default = 1
-}
+variable "asg_desired_capacity" {}
 
-variable "asg_max_size" {
-  default = 2
-}
+variable "asg_min_size" {}
 
-variable "db_instance_allocated_storage" {
-  default = 10
-}
+variable "asg_max_size" {}
 
-variable "db_instance_name" {
-  default = "mydb"
-}
+variable "db_instance_allocated_storage" {}
 
-variable "db_instance_engine" {
-  default = "mysql"
-}
+variable "db_instance_name" {}
 
-variable "db_instance_engine_version" {
-  default = "8.0"
-}
+variable "db_instance_engine" {}
 
-variable "db_instance_class" {
-  default = "db.t3.micro"
-}
+variable "db_instance_engine_version" {}
 
-variable "db_instance_username" {
-  default = "username"
-}
+variable "db_instance_class" {}
 
-variable "db_instance_password" {
-  default = "password"
-}
+variable "db_instance_username" {}
 
-variable "db_instance_parameter_group_name" {
-  default = "default.mysql8.0"
-}
+variable "db_instance_password" {}
 
-variable "db_subnet_group_name" {
-  default = "main"
-}
+variable "db_instance_parameter_group_name" {}
 
-variable "db_subnet_group_tags_name" {
-  default = "My DB subnet group"
-}
+variable "db_subnet_group_name" {}
 
-variable "alb_sg_name" {
-  default = "ALB Security Group"
-}
+variable "db_subnet_group_tags_name" {}
 
-variable "alb_sg_description" {
-  default = "Allow http/https access on port 80/443"
-}
+variable "alb_sg_name" {}
 
-variable "alb_sg_tag_name" {
-  default = "allow_http/https"
-}
+variable "alb_sg_description" {}
 
-variable "cidr_ipv4" {
-  default = "0.0.0.0/0"
-}
+variable "alb_sg_tag_name" {}
 
-variable "port_http" {
-  default = 443
-}
+variable "cidr_ipv4" {}
 
-variable "port_https" {
-  default = 80
-}
+variable "port_http" {}
 
-variable "ip_protocol" {
-  default = "tcp"
-}
+variable "port_https" {}
 
-variable "ip_protocol_all_ports" {
-  default = "-1"
-}
+variable "ip_protocol" {}
 
-variable "app_sg_name" {
-  default = "SSH Access"
-}
+variable "ip_protocol_all_ports" {}
 
-variable "app_sg_description" {
-  default = "Enable ssh access on port 22"
-}
+variable "app_sg_name" {}
 
-variable "app_sg_tags_name" {
-  default = "SSH SG"
-}
+variable "app_sg_description" {}
 
-variable "port_ssh" {
-  default = 22
-}
+variable "app_sg_tags_name" {}
 
-variable "web_server_sg_name" {
-  default = "Web Server Security Group"
-}
+variable "port_ssh" {}
 
-variable "web_server_sg_description" {
-  default = "Enable http/https access on port 80/443 via ALB and ssh via ssh sg"
-}
+variable "web_server_sg_name" {}
 
-variable "web_server_sg_tags_name" {
-  default = "Web server SG"
-}
+variable "web_server_sg_description" {}
 
-variable "db_sg_name" {
-  default = "Database Security Group"
-}
+variable "web_server_sg_tags_name" {}
 
-variable "db_sg_description" {
-  default = "Enable database access on port 3306 and ssh via ssh sg"
-}
+variable "db_sg_name" {}
 
-variable "db_sg_tags_name" {
-  default = "Database SG"
-}
+variable "db_sg_description" {}
 
-variable "port_mysql_access" {
-  default = 3306
-}
+variable "db_sg_tags_name" {}
+
+variable "port_mysql_access" {}

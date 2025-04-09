@@ -34,5 +34,5 @@ resource "aws_lb_target_group" "alb-tg" {
 resource "aws_lb_target_group_attachment" "test" {
   target_group_arn = aws_lb_target_group.alb-tg.arn
   target_id        = aws_instance.PublicWebTemplate.id
-  port             = 80
+  port             = var.port_https
 }
