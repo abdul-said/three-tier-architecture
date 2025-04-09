@@ -1,7 +1,7 @@
-Three-Tier Architecture Deployment with Terraform
+#Three-Tier Architecture Deployment with Terraform
 This project demonstrates the deployment of a scalable and secure three-tier architecture on AWS using Terraform. It showcases Infrastructure as Code (IaC) principles to provision and manage resources efficiently.
 
-Table of Contents:
+#Table of Contents:
  -  Overview
 
  -  Architecture Diagram
@@ -57,11 +57,11 @@ Features
 Prerequisites
 Before deploying this architecture, ensure you have the following:
 
- -`Terraform: Installed on your local machine. Download Terraform
+ - Terraform: Installed on your local machine. Download Terraform
 
- -`AWS CLI: Configured with appropriate credentials. Install AWS CLI
+ - AWS CLI: Configured with appropriate credentials. Install AWS CLI
 
- -`AWS Account: With permissions to create the necessary resources.
+ - AWS Account: With permissions to create the necessary resources.
 
 Usage
 Clone the Repository:
