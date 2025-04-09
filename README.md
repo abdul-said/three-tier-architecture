@@ -1,7 +1,7 @@
-#Three-Tier Architecture Deployment with Terraform
+# Three-Tier Architecture Deployment with Terraform
 This project demonstrates the deployment of a scalable and secure three-tier architecture on AWS using Terraform. It showcases Infrastructure as Code (IaC) principles to provision and manage resources efficiently.
 
-#Table of Contents:
+# Table of Contents:
  -  Overview
 
  -  Architecture Diagram
