@@ -43,7 +43,8 @@ The three-tier architecture is a well-established software application architect
 
 ## Architecture Diagram
 
- Note: Replace link-to-your-architecture-diagram with the actual URL of your architecture diagram.
+ ![Three-Tier Architecture](https://camo.githubusercontent.com/4f636bf8243285c516081cb33c43105721830bcab3cff5c3888d9f524ed9e9fa/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f3736312f312a44767576784550657543676a65664a75676a344964672e6a706567)
+
 
 ### Features
  -  Infrastructure as Code (IaC): Entire infrastructure is defined using Terraform.
